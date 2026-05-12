@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>IUB Student Portal - Redesign</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+/* NAVBAR */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(15,23,42,0.95);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* HERO */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:50px 8%;
+    background:linear-gradient(to right,#0f172a,#111827);
+}
+
+.hero-content h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero-content span{
+    color:#38bdf8;
+}
+
+.hero-content p{
+    color:#cbd5e1;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.search-box{
+    margin-top:30px;
+}
+
+.search-box input{
+    width:350px;
+    max-width:90%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    outline:none;
+    background:#1e293b;
+    color:white;
+}
+
+/* PORTALS */
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+}
+
+.portal-section{
+    padding:80px 8%;
+}
+
+.portal-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    transition:0.3s ease;
+    backdrop-filter:blur(10px);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:#38bdf8;
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#38bdf8;
+}
+
+.card p{
+    color:#cbd5e1;
+    margin-bottom:20px;
+}
+
+.card a{
+    text-decoration:none;
+    background:#38bdf8;
+    color:white;
+    padding:12px 20px;
+    border-radius:10px;
+    display:inline-block;
+    transition:0.3s;
+}
+
+.card a:hover{
+    background:#0284c7;
+}
+
+/* ABOUT */
+
+.about{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.about p{
+    max-width:800px;
+    margin:auto;
+    color:#cbd5e1;
+    line-height:1.8;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111827;
+    text-align:center;
+    padding:25px;
+    color:#94a3b8;
+    margin-top:50px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero-content h1{
+        font-size:38px;
+    }
+
+    .section-title{
+        font-size:30px;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">IUB Portal</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Portals</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Welcome to <span>IUB Student Portal</span></h1>
+
+<p>
+Access university portals, LMS, student resources, fee information, results and more — all in one modern dashboard.
+</p>
+
+<div class="search-box">
+<input type="text" placeholder="Search Portal...">
+</div>
+
+</div>
+
+</section>
+
+<!-- PORTAL CARDS -->
+
+<section class="portal-section">
+
+<h2 class="section-title">Quick Access Portals</h2>
+
+<div class="portal-grid">
+
+<div class="card">
+<h3>Student Portal</h3>
+<p>Access student profile and academic information.</p>
+<a href="#">Open</a>
+</div>
+
+<div class="card">
+<h3>LMS Portal</h3>
+<p>Manage assignments, lectures and learning resources.</p>
+<a href="#">Open</a>
+</div>
+
+<div class="card">
+<h3>Fee Portal</h3>
+<p>View fee vouchers and payment details.</p>
+<a href="#">Open</a>
+</div>
+
+<div class="card">
+<h3>Results Portal</h3>
+<p>Check academic results and performance.</p>
+<a href="#">Open</a>
+</div>
+
+<div class="card">
+<h3>Admission Portal</h3>
+<p>Manage admission and application information.</p>
+<a href="#">Open</a>
+</div>
+
+<div class="card">
+<h3>Scholarship Portal</h3>
+<p>Access scholarships and financial support details.</p>
+<a href="#">Open</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about">
+
+<h2 class="section-title">About IUB Portal</h2>
+
+<p>
+This redesigned web application provides students with quick access to important university resources in a modern, responsive and user-friendly interface. The content and functionality remain similar while the visual design has been completely reimagined.
+</p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 IUB Student Portal | Creative Redesign Assignment</p>
+
+</footer>
+
+<script>
+
+const searchInput = document.querySelector("input");
+
+searchInput.addEventListener("keyup", function(){
+
+let filter = searchInput.value.toLowerCase();
+let cards = document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+
+let text = card.innerText.toLowerCase();
+
+if(text.includes(filter)){
+card.style.display="block";
+}
+else{
+card.style.display="none";
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
